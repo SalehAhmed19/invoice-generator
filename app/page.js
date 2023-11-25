@@ -12,9 +12,14 @@ import { useState } from "react";
 export default function Home() {
   const [showInvoice, setShowInvoice] = useState(false);
   const [name, setName] = useState("");
-  const [address1, setAddress1] = useState("");
-  const [address2, setAddress2] = useState("");
-  const [address3, setAddress3] = useState("");
+  const [address1, setBillingAddress1] = useState("");
+  const [address2, setBillingAddress2] = useState("");
+  const [address3, setBillingAddress3] = useState("");
+  const [address4, setBillingAddress4] = useState("");
+  const [shippingAddress1, setShippingAddress1] = useState("");
+  const [shippingAddress2, setShippingAddress2] = useState("");
+  const [shippingAddress3, setShippingAddress3] = useState("");
+  const [shippingAddress4, setShippingAddress4] = useState("");
 
   const handlePrint = () => {
     setShowInvoice(true);
@@ -33,15 +38,25 @@ export default function Home() {
             address1={address1}
             address2={address2}
             address3={address3}
+            address4={address4}
+            shippingAddress1={shippingAddress1}
+            shippingAddress2={shippingAddress2}
+            shippingAddress3={shippingAddress3}
+            shippingAddress4={shippingAddress4}
           />
         </>
       ) : (
         <InvoiceEditor
           handlePrint={handlePrint}
           setName={setName}
-          setAddress1={setAddress1}
-          setAddress2={setAddress2}
-          setAddress3={setAddress3}
+          setBillingAddress1={setBillingAddress1}
+          setBillingAddress2={setBillingAddress2}
+          setBillingAddress3={setBillingAddress3}
+          setBillingAddress4={setBillingAddress4}
+          setShippingAddress1={setShippingAddress1}
+          setShippingAddress2={setShippingAddress2}
+          setShippingAddress3={setShippingAddress3}
+          setShippingAddress4={setShippingAddress4}
         />
       )}
     </main>

@@ -19,7 +19,7 @@ export const TermTable = () => {
       <Table.Body className="divide-y divide-gray-25">
         <Table.Row className="bg-white">
           <Table.Cell>
-            <p>18 May 2023</p>
+            <p>{new Date().toLocaleDateString()}</p>
           </Table.Cell>
           <Table.Cell>
             <p className="text-body-5 font-medium text-metal-500">
@@ -27,9 +27,7 @@ export const TermTable = () => {
             </p>
           </Table.Cell>
           <Table.Cell>
-            <p className="text-body-5 font-medium text-metal-500">
-              18 May 2023
-            </p>
+            <p>{new Date().toLocaleDateString()}</p>
           </Table.Cell>
         </Table.Row>
       </Table.Body>
